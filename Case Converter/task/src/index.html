@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <!-- What does viewport do?   -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script defer src="scripts/script.js"></script>
 </head>
 <body>
 <div class="title">Case Converter</div>
-<textarea></textarea>
-<button id="upper-case"></button>
-<button id="lower-case"></button>
-<button id="proper-case"></button>
-<button id="sentence-case"></button>
+<textarea id="text"></textarea>
+<button id="upper-case" onclick="convertToUpperCase()">Upper case</button>
+<button id="lower-case" onclick="convertToLowerCase()">Lower case</button>
+<button id="proper-case" onclick="convertToProperCase()">Proper case</button>
+<button id="sentence-case" onclick="convertToSentenceCase()">Sentence case</button>
 </body>
 </html>

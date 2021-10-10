@@ -1,6 +1,6 @@
 type: edu
 files:
-- name: src/index.html
+  - name: src/index.html
   visible: true
   text: |
     <!doctype html>
@@ -166,6 +166,12 @@ files:
         }
     );
   learner_created: false
+  - name: src/css/style.css
+    visible: true
+    learner_created: true
+  - name: src/scripts/script.js
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/193/stages/963/implement#comment
 status: Unchecked
 record: -1
