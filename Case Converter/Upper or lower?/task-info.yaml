@@ -1,17 +1,17 @@
 type: edu
 files:
   - name: src/index.html
-  visible: true
-  text: |
-    <!doctype html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-    </head>
-    <body>
+    visible: true
+    text: |
+      <!doctype html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>Document</title>
+      </head>
+      <body>
 
-    </body>
+      </body>
     </html>
   learner_created: false
 - name: test/test.js
@@ -166,12 +166,15 @@ files:
         }
     );
   learner_created: false
-  - name: src/css/style.css
-    visible: true
-    learner_created: true
   - name: src/scripts/script.js
     visible: true
     learner_created: true
+  - name: src/css/style.css
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/193/stages/963/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 11 Oct 2021 16:11:45 UTC
 record: -1

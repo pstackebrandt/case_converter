@@ -10,10 +10,16 @@
 </head>
 <body>
 <div class="title">Case Converter</div>
-<textarea id="text">Est fatalis vortex, cesaris. Lapsuss sunt indictios de raptus humani generis.</textarea>
-<button id="upper-case" onclick="convert('upper case')">Upper case</button>
-<button id="lower-case" onclick="convert('lower case')">Lower case</button>
-<button id="proper-case" onclick="convertToProperCase()">Proper case</button>
-<button id="sentence-case" onclick="convertToSentenceCase()">Sentence case</button>
+<!--<textarea id="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</textarea>-->
+<textarea id="text"></textarea>
+<!--Est fatalis vortex, cesaris. Lapsuss sunt indictios de raptus humani generis.-->
+
+<div class="controls">
+    <button id="upper-case" onclick="convert('upper case')">Upper case</button>
+    <button id="lower-case" onclick="convert('lower case')">Lower case</button>
+    <button id="proper-case" onclick="convert('proper case')">Proper case</button>
+    <button id="sentence-case" onclick="convert('sentence case')">Sentence case</button>
+    <button onclick="addDummyText()">Add dummy text</button>
+</div>
 </body>
 </html>
