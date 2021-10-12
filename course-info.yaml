@@ -7,5 +7,6 @@ summary: We work with texts quite often, and it's very sad when it turns out tha
   <a href="https://hyperskill.org/projects/193?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=project-card">https://hyperskill.org/projects/193</a>
 programming_language: JavaScript
 content:
-- Case Converter
+  - Case Converter
+- Topics
 mode: Study

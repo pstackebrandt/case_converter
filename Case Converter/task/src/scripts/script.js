@@ -12,9 +12,25 @@ function addDummyText() {
     console.log(addDummyText);
 }
 
-function convertToSentenceCase() {
-
+function saveText() {
+    // get text from area
+    let text = document.getElementById("text").value;
+    download("text.txt", text);
 }
+
+function download(filename, text) {
+    let element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
 
 /**/
 function convertText(text, targetType) {

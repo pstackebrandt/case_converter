@@ -1,6 +1,6 @@
 type: edu
 files:
-- name: src/index.html
+  - name: src/index.html
   visible: true
   text: |
     <!doctype html>
@@ -220,6 +220,158 @@ files:
         }
     );
   learner_created: false
+  - name: src/css/style.css
+    visible: true
+    text: |-
+      * {
+          font-family: 'Roboto', sans-serif;
+      }
+
+      .title {
+          font-size: 6vw;
+          margin: 4vw;
+      }
+
+      body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      #text {
+          width: 70vw;
+          height: 40vh;
+          border: solid 1px;
+          padding: 10px;
+          margin: 1vw;
+          font-size: 1.4vw;
+      }
+
+      textarea {
+
+      }
+
+      .controls {
+          width: 70vw;
+          margin: 1vw;
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+      }
+
+      button {
+          margin: 2vw;
+          background-color: rgba(240, 177, 80, 0.76);
+          font-size: 1.4vw;
+      }
+
+      @media screen and (max-width: 500px) {
+          .title {
+              font-size: 8vw;
+          }
+
+          #text {
+              width: 80vw;
+              min-height: 40vh;
+              border: solid 1px;
+              padding: 2vw;
+              margin: 1vw;
+              font-size: 4.5vw;
+          }
+
+          .controls {
+              width: 80vw;
+              justify-content: center;
+          }
+
+          button {
+              font-size: 4vw;
+          }
+      }
+
+      @media screen and (max-width: 1200px) {
+          .title {
+              font-size: 8vw;
+          }
+
+          #text {
+              width: 80vw;
+              min-height: 40vh;
+              border: solid 1px;
+              padding: 2vw;
+              margin: 1vw;
+              font-size: 2.5vw;
+          }
+
+          .controls {
+              width: 80vw;
+              justify-content: center;
+          }
+
+          button {
+              font-size: 3vw;
+          }
+      }
+    learner_created: true
+  - name: src/scripts/script.js
+    visible: true
+    text: |-
+      /* type: string */
+      function convert(targetType) {
+          let textArea = document.getElementById("text");
+
+          let convertedText = convertText(textArea.value, targetType);
+          textArea.value = convertedText;
+      }
+
+      function addDummyText() {
+          let textArea = document.getElementById("text");
+          textArea.value = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+          console.log(addDummyText);
+      }
+
+      function convertToSentenceCase() {
+
+      }
+
+      /**/
+      function convertText(text, targetType) {
+          // console.log(`Text to convert: ${text}`);
+          let convertedText;
+          const myName = "convertText(): ";
+
+          switch (targetType) {
+              case "upper case":
+                  convertedText = text.toUpperCase()
+                  console.log(`${myName} process text to ${targetType}.`);
+                  break;
+              case "lower case":
+                  convertedText = text.toLowerCase()
+                  console.log(`${myName} process text to ${targetType}.`);
+                  break;
+              case "proper case":
+                  convertedText = text.toLowerCase()
+                  convertedText = convertedText.replace(/(^\w|\s\w)/g, c => c.toUpperCase());
+                  // /(^\w{1})|(\s+\w{1})/g // ok, from https://www.freecodecamp.org/news/how-to-capitalize-words-in-javascript/
+                  // /\b\w/g  wrong, changes also d of abc'd
+                  // /(\s\w|^\w)/g // works, by Peter
+                  break;
+              case "sentence case":
+                  convertedText = text.toLowerCase()
+                  convertedText = convertedText.replace(/(^\w|\.\s\w)/g, c => c.toUpperCase());
+                  // /(^\w|\.\s\w)/g // works on simple test sentence only!
+                  break;
+              default:
+                  console.log(`Unknown target type ${targetType}. Can't process conversion.`);
+          }
+
+          return convertedText;
+      }
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/193/stages/964/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Tue, 12 Oct 2021 08:57:54 UTC
 record: -1

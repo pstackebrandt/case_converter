@@ -12,8 +12,8 @@ files:
       <body>
 
       </body>
-    </html>
-  learner_created: false
+      </html>
+    learner_created: false
 - name: test/test.js
   visible: false
   text: |
@@ -176,5 +176,5 @@ feedback_link: https://hyperskill.org/projects/193/stages/963/implement#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Mon, 11 Oct 2021 16:11:45 UTC
-record: -1
+  time: Tue, 12 Oct 2021 08:24:49 UTC
+record: 2
